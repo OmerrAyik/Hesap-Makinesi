@@ -1,0 +1,52 @@
+// Hesap Makinesi Uygulaması
+// Değişkenler(let => değiştirilemez , var => değiştirilebilir)
+// Operatörler
+// Async Metodu
+// if Condition
+
+//camister => akıllı sözleşme
+actor hesapmakinesi
+{
+    var hucre: Int = 0;
+    
+    //Toplama
+    public func toplama(s :Int) : async Int
+    {
+      hucre +=s;
+      hucre
+    };
+
+    // Çıkarma
+    public func cikarma( s: Int) : async Int
+    {
+      hucre-=s;
+      hucre
+    };
+
+    // çarpma 
+    public func carpma(s: Int ) : async Int
+    {
+      hucre*=s;
+      hucre
+    };
+
+    //bölme
+    public func bolme(s: Int ): async ?Int
+    {
+     if(s ==0 )
+     {
+      null
+     }
+     else
+     {
+       hucre /=s;
+       ?hucre
+     };
+    };
+    
+    // temizle
+     public func temizle() : async ()
+     {
+      hucre:=0;
+     };
+}
